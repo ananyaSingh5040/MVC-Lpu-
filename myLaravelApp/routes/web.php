@@ -59,8 +59,29 @@ Route::get('/user/{name}', function ($name) {
 });
 Route::get('/user1/{name}', function ($name) {
     return "Welcome " . $name;
-})->where('name','[A-Za-z]+'); //only allows Alphabets (regular expressions)
+})->where('name', '[A-Za-z]+'); //only allows Alphabets (regular expressions)
 
 Route::get('/about1/{id}', function ($id) {
     return "Welcome " . $id;
 }); //globally id ka constraint develop kiya hai in appserviceprovider <3.
+
+//Optional parameter (default value)
+Route::get('/optional/{name?}', function ($name = "Guest") {
+    return "Welcome " . $name;
+});
+
+// Multiple parameters:
+Route::get('/multiple/{name}/{id}', function ($name, $id) {
+    return "Hello " . $name . "<br>Your Id: " . $id;
+});
+
+//JSON Format:
+Route::get('/json/{name}/{id}/{rollNo}', function ($name, $id, $rollNo) {
+    return response()->json([
+        'name' => $name,
+        'id' => $id,
+        'rollNo' => $rollNo,
+    ]);
+});
+
+
