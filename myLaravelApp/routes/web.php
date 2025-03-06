@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FirstController;
 
 Route::get('/', function () {
     $name = "Khushi";
@@ -83,5 +84,10 @@ Route::get('/json/{name}/{id}/{rollNo}', function ($name, $id, $rollNo) {
         'rollNo' => $rollNo,
     ]);
 });
+
+
+//A route having a controller
+Route::get('/controller',[FirstController::class,'show']);
+Route::get('/controller',[FirstController::class,'show1']); //Sabse latest wala call hoga!
 
 
