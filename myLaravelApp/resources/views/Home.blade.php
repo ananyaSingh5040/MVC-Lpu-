@@ -9,6 +9,7 @@
     }
 </style>
 <body>
+    @include('Common.Header')
     <div>
     <h1>HOMEPAGE</h1>
     <h3>List of students</h3> 
@@ -17,6 +18,7 @@
         <li><a href="/aman">Aman</a></li>
         <li><a href="/shyam">Shyam</a></li>
     </ul>
+    @include('Common.footer')
     </div>
 </body>
 
