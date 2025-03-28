@@ -19,7 +19,7 @@ class StudentController1 extends Controller
     public function Details()
     {
         return view('Student.details');
-    }
+    } 
     public function Fees()
     {
         return view('Student.fees');
