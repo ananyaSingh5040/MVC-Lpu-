@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('rollno');
+            $table->integer('rollno'); 
             $table->string('email');
             $table->timestamps();
         });
